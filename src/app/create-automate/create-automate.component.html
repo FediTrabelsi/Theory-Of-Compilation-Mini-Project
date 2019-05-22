@@ -1,0 +1,83 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+
+<section id="profile">
+      <div class="col-md-7">
+        <div class="card" style="margin-left: 10%" >
+          <div class="card-header">
+            <h3>Create the automate</h3>
+          </div>
+
+          <div class="card-body">
+            <h4>Input the number of states</h4>
+            <input type="number"  [(ngModel)]="num" name="states" class="form-control" placeholder="*** Number of states ***">
+            <br>
+            <button (click)="submitStates()" class="btn btn-success">Save</button>
+            <br>
+            <br>
+            <p>Totale number of states is : {{Number}}</p>
+            <br>
+
+            <h4>Input the alphabet</h4>
+            <input type="text" [(ngModel)]="alpha"   name="states" class="form-control" placeholder="*** Write the letter then press add to add it to the alphabet ***">
+            <br>
+            <button (click)="addAlphabet()" class="btn btn-success">Save</button>
+            <br>
+            <br>
+            <p>The corrent alphabet is : </p>
+            <p >
+              <span class="tags" style="white-space:pre-wrap; margin-right: 1.5%" *ngFor="let item of Alphabet ; let i = index"  >{{item}}</span>
+            </p>
+            <br>
+
+            <h4>Input the Initial states</h4>
+            <input type="text" [(ngModel)]="ini"  name="states" class="form-control" placeholder="*** Input the state number then add to add it to initial states ***">
+            <br>
+            <br>
+            <button (click)="addInitial()" class="btn btn-success">Save</button>
+            <br>
+            <br>
+            <p>The corrent initail states are : </p>
+            <p >
+              <span class="tags" style="white-space:pre-wrap; margin-right: 1.5%" *ngFor="let item of Initial ; let i = index"  >{{item}}</span>
+            </p>
+            <br>
+
+            <h4>Input the final states</h4>
+            <input type="text"  [(ngModel)]="finale" name="states" class="form-control" placeholder="*** Input the state number then add to add it to final states ***">
+            <br>
+            <button (click)="addFinal()" class="btn btn-success">Save</button>
+            <br>
+            <br>
+            <p>The corrent initail states are : </p>
+            <p >
+              <span class="tags" style="white-space:pre-wrap; margin-right: 1.5%" *ngFor="let item of Final ; let i = index"  >{{item}}</span>
+            </p>
+            <br>
+            <button (click)="createAutomate()" class="btn btn-primary">Done</button>
+
+
+            <h4>Input the transissions :</h4>
+            <input type="text"  [(ngModel)]="transission" name="states" class="form-control" placeholder="*** Input the state number then add to add it to final states ***">
+            <br>
+            <button (click)="addNewTransission()" class="btn btn-success">Save</button>
+            <br>
+            <br>
+            <h4>test:</h4>
+            <input type="text"  [(ngModel)]="word" name="states" class="form-control" placeholder="*** Input the state number then add to add it to final states ***">
+            <br>
+            <button (click)="checkOne(Initial,word)" class="btn btn-success">Save</button>
+            <br>
+            <br>
+            <div>
+              <p>{{isword}}</p>>
+            </div>
+          </div>
+        </div>
+
+
+
+        </div>
+
+      </section>
